@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+  <classPathEntry location="E:\apache-maven-3.3.9\repository\mysql\mysql-connector-java\5.1.38\mysql-connector-java-5.1.38.jar"/>
+  <context id="context1">
+    <jdbcConnection connectionURL="jdbc:mysql://192.168.0.180:3306/test" driverClass="com.mysql.jdbc.Driver" password="test" userId="test" />
+    <javaModelGenerator targetPackage="com.example.model" targetProject="smm/src/main/java" />
+    <sqlMapGenerator targetPackage="mapper" targetProject="smm/src/main/resources" />
+    <javaClientGenerator targetPackage="com.example.mapper" targetProject="smm/src/main/java" type="XMLMAPPER" />
+	<table schema="smm" tableName="user">
+		<generatedKey column="id" sqlStatement="MySql" identity="true" />
+	</table>
+	<table schema="smm" tableName="cart">
+		<generatedKey column="id" sqlStatement="MySql" identity="true"/>
+	</table>
+	<table schema="smm" tableName="product">
+		<generatedKey column="id" sqlStatement="MySql" identity="true"/>
+	</table>
+  </context>
+</generatorConfiguration>
